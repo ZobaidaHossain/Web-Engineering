@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>first:</td>
+            <td><input type="number" id="f"></td>
+        </tr>
+        <tr>
+            <td>last:</td>
+            <td><input type="number" id="l"></td>
+        </tr>
+        <tr>
+            <td>result:</td>
+            <td><input type="text" id="res"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" id="plus" value="+"></td>
+            <td><input type="submit" id="minus" value="-"></td>
+            <td><input type="submit" id="multi" value="*"></td>
+            <td><input type="submit" id="div" value="/"></td>
+        </tr>
+    </table>
+    <script>
+var plus=document.getElementById("plus");
+plus.onclick=function(){
+    var first=Number(document.getElementById("f").value);
+    var last=Number(document.getElementById("l").value);
+    var res;
+    res=first+last;
+    document.getElementById("res").value=res;
+
+
+}
+
+    </script>
+</body>
+</html>

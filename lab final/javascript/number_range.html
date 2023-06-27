@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Sequence</title>
+  </head>
+  <body>
+    <h1>Number Range</h1>
+    <label for="first-number">First Number:</label>
+    <input type="number" id="first-number" />
+    <br />
+    <label for="last-number">Last Number:</label>
+    <input type="number" id="last-number" />
+    <br />
+    <button onclick="generateSequence()">Result</button>
+    <br />
+    <p id="number-sequence"></p>
+
+    <script>
+      function generateSequence() {
+        var firstNumber = parseInt(document.getElementById("first-number").value);
+        var lastNumber = parseInt(document.getElementById("last-number").value);
+        var numberSequence = "";
+
+        for (var i = firstNumber; i <= lastNumber; i++) {
+          numberSequence += i;
+        }
+
+        document.getElementById("number-sequence").innerHTML = numberSequence;
+      }
+    </script>
+  </body>
+</html>

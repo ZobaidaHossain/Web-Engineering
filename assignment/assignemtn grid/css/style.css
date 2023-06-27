@@ -1,0 +1,310 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.33%;
+}
+.col-5{
+    width: 41.66%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.33%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.33%;
+}
+.col-11{
+    width: 91.66%;
+}
+.col-12{
+    width: 100%;
+}
+
+[class*='col-']{
+    /* border: 1px solid black; */
+    float: left;
+}
+
+.row::after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.h-50{
+    height: 50px;
+}
+.h-100{
+    height: 100px;
+}
+
+.h-200{
+    height: 200px;
+}
+.h-300{
+    height: 300px;
+}
+.h-400{
+    height: 400px;
+}
+.h-600{
+    height: 600px;
+}
+
+.bg-dark{
+    background-color: #934d24;
+}
+.bg-light{
+    border-color: #b8b527;
+}
+.bg-white{
+    background-color: #fff;
+}
+/* Header Section */
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Nav-Bar Section */
+nav{
+    margin: auto;
+    background-color: rgb(204, 230, 11);
+}
+
+nav ul{
+    text-align: center;
+    margin: 13px 0;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin: 25px ;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 15px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(9, 11, 13);
+    padding: 20px 0;
+}
+
+nav ul li:hover{
+    background-color: rgb(8, 79, 146);
+    transition: all 0.5s;
+}
+nav ul li:hover a{
+    color:white;
+    transition: all 0.5s;
+}
+
+/* footer Section */
+footer h2{
+    margin: 30px 0;
+}
+
+footer ul li{
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.footer{
+    text-align: center;
+    color: white;
+    background-color: rgb(137, 170, 207);
+}
+.footer p{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* homepage section */
+
+.home-about-myself{
+    padding:20px
+}
+.home-content h2, .home-about-myself h2{
+    margin: 15px 0;
+}
+
+.home-content ul{
+    padding:  0 20px;}
+
+.home-content ul li{
+    font-size: 18px;
+}
+/* about section */
+
+.about-myself{
+    margin: 10px 20px;
+}
+.about-myself h1{
+    margin: 20px 0;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    padding: 8px;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    color: rgb(8, 79, 146);
+    margin: 10px 0;
+    font-weight: 700;
+    background-color: #dde7f4;
+  }
+  
+.button:hover {
+    background-color: rgb(8, 79, 146); /* Green */
+    color: white;
+}
+
+.about-myself img{
+    height: 300px;
+    width: 220px;
+
+}
+
+.about-contact{
+    margin: 20px 0;
+}
+
+.client-review-para{
+    text-align: center;
+}
+
+.client-review-para h2{
+    margin: 20px 0;
+}
+.client-review-para h2::after{
+    content: " ";
+    height: 2px;
+    width: 100px;
+    border-bottom: 5px solid red;
+    position: relative;
+    top: 500px;
+    left: 20px;
+}
+
+.client-review-content img{
+    height: 200px;
+}
+
+.client-review-content p{
+    padding-right: 20px;
+}
+
+/* portfolio-page */
+.professional-info{
+    margin: 30px;
+}
+
+.professional-info h2{
+    margin-bottom: 10px;
+}
+
+.professional-info img{
+    height: 150px;
+    width: 200px;
+    position: relative;
+    left: 200px;
+}
+.project-section h2, .edu-section h2, .map h2, .images h2, .img-title h2{
+    text-align: center;
+    margin: 15px 0;
+}
+.project-section ul, .skills{
+    padding: 30px;
+}
+
+.about-edu{
+    margin: 10px 0;
+}
+
+/* gallery section */
+
+.img-title .img-title-content{
+    padding: 5px;
+    height: 200px;
+}
+.layer{
+    height: 8%;
+    width: 18%;
+    position: absolute;
+    background-color: black;
+    top: 258px;
+    left: 98px;
+    opacity: 0.4;
+}
+.img-caption{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+    top: 18px;
+    left: 20px;
+}
+
+.l1{
+    left: 384px;
+}
+.l2{
+    left: 670px;
+}
+
+.img-content img{
+    padding: 0 3px;
+    height: 200px;
+}
+
+.img-content img:hover{
+    transform: scale(1.5);
+    transition: all 1s;
+}
+
+/* contact section */
+.contact-section h2{
+    margin: 15px 0;
+}
+
+.contact-section .button{
+    width: 100%;
+}
+.virtual-contact .col-6{
+    margin: 3px 0;
+}
+
+
+

@@ -1,0 +1,132 @@
+----html----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+</head>
+<body>
+    <form action="index.php" method="POST">
+        ID: <input type="number" name="user_id"><br>
+        Name(Full Name): <input type="text" name="user_name"><br>
+        Order id: <input type="number" name="userorder_id"><br>
+        Total Bill: <input type="number" name="user_bill"><br>
+        Shipping Address: <input type="text" name="user_address"><br>
+ 
+        <input type="submit" name="insert" value="Insert">
+        <input type="submit" name="update" value="Update">
+        <input type="submit" name="search" value="Search">
+        <input type="submit" name="delete" value="Delete">
+        
+    </form>
+ 
+</body>
+</html>
+
+
+---php--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <?php
+        
+       // $con = mysqli_connect('localhost','root','','userdb');
+        
+         $con= mysqli_connect('localhost','root','');
+        if(!$con)
+        {
+            echo 'Server not connected';
+        }
+            if(!mysqli_select_db($con, 'userdb'))
+        {
+            echo "Database not selected";
+        }
+ else {echo "Successfully connected";}
+ 
+        if(isset($_POST["insert"])){          
+            $id=$_POST['user_id'];
+            $name=$_POST['user_name'];
+            $orderid=$_POST['userorder_id'];
+            $bill=$_POST['user_bill'];
+            $shippingad=$_POST['user_address'];
+            $sql = "INSERT INTO user (user_id,user_name,userorder_id,user_bill,user_address)VALUES ('$id','$name','$orderid','$bill','$shippingad')";
+ if(!mysqli_query($con,$sql))
+         {
+             echo "Not Inserted";
+         }
+ else
+ {
+     echo"Inserted/Save";
+ }
+        }
+ 
+        if(isset($_POST["update"])){
+   
+            $id=$_POST['user_id'];
+            $name=$_POST['user_name'];
+            $orderid=$_POST['userorder_id'];
+            $bill=$_POST['user_bill'];
+            $shippingad=$_POST['user_address'];
+            $sql = "UPDATE user SET user_bill='$bill',user_name='$name',userorder_id='$orderid',user_address='$shippingad' WHERE user_id='$id'";
+ 
+               if(!mysqli_query($con,$sql))
+         {
+             echo "Not Updated";
+         }
+ else
+ {
+     echo"Updated/Save";
+ }
+        }
+ 
+         if(isset($_POST["search"])){
+ 
+                
+            $id=$_POST['user_id'];
+            $name=$_POST['user_name'];
+            $orderid=$_POST['userorder_id'];
+            $bill=$_POST['user_bill'];
+            $shippingad=$_POST['user_address'];
+  
+            $sql="SELECT * FROM user WHERE userorder_id LIKE '%$orderid%'";
+            $result=$con->query($sql);
+ 
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                  echo "id: " . $row["user_id"]. " - Name: " . $row["user_name"]. " " . "<br>";
+                }
+              } else {
+                echo "0 results";
+              }
+              $con->close();
+        }
+ 
+        if(isset($_POST["delete"])){       
+            $id=$_POST['user_id'];
+            $name=$_POST['user_name'];
+            $orderid=$_POST['userorder_id'];
+            $bill=$_POST['user_bill'];
+            $shippingad=$_POST['user_address'];
+ 
+            $sql = "DELETE FROM user WHERE user_id='$id'";
+            if(!mysqli_query($con,$sql))
+         {
+             echo "Not Deleted";
+         }
+ else
+ {
+     echo"Deleted/Save";
+ }
+        }
+ 
+    ?>
+</body>
+</html>
+ 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const words = ["hello", "world", "coder", "computer", "programming"];
+
+function handleButtonClick() {
+  // Loop through the array of words
+  for (let i = 0; i < words.length; i++) {
+    // Check if the current word contains "er"
+    if (words[i].includes("er")) {
+      // If it does, remove the word from the array
+      words.splice(i, 1);
+      // Decrement the index to account for the removed element
+      i--;
+    }
+  }
+
+  // Convert the remaining words to upper case
+  const upperCaseWords = words.map(word => word.toUpperCase());
+
+  // Display the resulting array of upper case words
+  console.log(upperCaseWords);
+}
+
+// Attach the button click event handler
+const button = document.querySelector("button");
+button.addEventListener("click", handleButtonClick);
+
+    </script>
+</body>
+</html>

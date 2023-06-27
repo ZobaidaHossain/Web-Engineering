@@ -1,0 +1,110 @@
+.header{
+    width:99%;
+    height:80px;
+    border: 1px solid black;
+    float:left;
+}
+.header .logo{
+    width:40%;
+    height:80px;
+    border:1px solid black;
+    float:left;
+}
+.header .head{
+    width:59%;
+    height:80px;
+    border:1px solid black;
+    float:left;
+}
+.fo{
+    width:99%;
+    height:80px;
+    border:1px solid black;
+    float:left;
+}
+.con{
+    width:99%;
+    height:500px;
+    float:left;
+    border:1px solid black;
+    text-align:center;
+
+}
+.con .left{
+    width:20%;
+    height:500px;
+    float:left;
+    border:1px solid black;
+}
+.con .cen{
+    width:59%;
+    height:500px;
+    float:left;
+    border:1px solid black;
+}
+.con .cen .h{
+    width:90%;
+    height:80px;
+    margin-top:20px;
+    margin-left:5%;
+    border:1px solid black;
+}
+.con .cen .r1{
+    width:20%;
+    height:300px;
+    border:1px solid black;
+    margin-left:5%;
+    margin-top:20px;
+    float:left;
+
+}
+.con .cen .r2{
+    width:20%;
+    height:300px;
+    border:1px solid black;
+    margin-left:5%;
+    margin-top:20px;
+    float:left;
+    
+    
+}
+.con .cen .r3{
+    width:20%;
+    height:300px;
+    border:1px solid black;
+    float:left;
+    margin-left:5%;
+    margin-top:20px;
+    
+}
+.con .cen .r4{
+    width:17%;
+    height:300px;
+    border:1px solid black;
+    float:left;
+    margin-left:5%;
+    margin-top:20px;
+    
+}
+.con .cen .ff{
+    width:90%;
+    height:60px;
+    float:left;
+    margin-top:10px;
+    margin-left:5%;
+    border:1px solid black;
+    
+}
+.con .right{
+    width:20%;
+    height:500px;
+    float:left;
+    border:1px solid black;
+}
+.footer{
+    width:99%;
+    height:80px;
+    float:left;
+    border:1px solid black;
+}
+

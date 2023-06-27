@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>first:</td>
+            <td><input type="number" id="f"></td>
+        </tr>
+        <tr>
+            <td>last:</td>
+            <td><input type="number" id="l"></td>
+        </tr>
+        <tr>
+            <td>result:</td>
+            <td><input type="text" id="res"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" id="sub" value="result"></td>
+        </tr>
+    </table>
+    <script>
+        var plus=document.getElementById("sub");
+        plus.onclick=function(){
+            var first=alert(Number(document.getElementById("f").value));
+            var last=alert(Number(document.getElementById("l").value));
+            var res="";
+           if(first>=80 && last>=80){
+            document.write("a+");
+           }
+           else{
+            document.write("fail");
+           }
+            document.getElementById("res").value=res;
+        }
+    </script>
+</body>
+</html>

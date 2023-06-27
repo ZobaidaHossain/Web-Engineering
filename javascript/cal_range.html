@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>bangla: </td>
+            <td><input type="number" id="first"></td>
+        </tr>
+        <tr>
+            <td>english: </td>
+            <td><input type="number" id="last"></td>
+        </tr>
+        <tr>
+            <td>result: </td>
+            <td><input type="text" id="res"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" id="plus" value="result"></td>
+        </tr>
+    </table>
+    <script>
+        var plusBtn = document.getElementById("plus");
+         plusBtn.onclick= function(){
+            var first=parseInt(document.getElementById("first").value);
+            var last=parseInt(document.getElementById("last").value);
+            var res="";
+            for(var i=first;i<=last;i++){
+                res+=i;
+            }
+            document.getElementById("res").value=res;
+
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java </title>
+</head>
+<body>
+  <table>
+    <tr>
+        <td>First Number:</td>
+        <td> <input type="number"id="fNumber"></td>
+    </tr>
+    <tr>
+        <td>Last Number:</td>
+        <td> <input type="number" id="lNumber"></td>
+    </tr>
+    <tr>
+        <td>Result:</td>
+        <td> <input type="text"id="result"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td> <input type="submit"id="plus" value="+">
+            <input type="submit"id="minus" value="-">
+            <input type="submit"id="multiplication" value="*">
+            <input type="submit"id="division" value="/">
+        
+        </td>
+    </tr>
+  </table>
+<script>
+    var plusElement = document.getElementById('plus');
+    plusElement.onclick = function() {
+    var firstNumber = Number (document.getElementById('fNumber').value);
+    var lastNumber = Number (document.getElementById('lNumber').value);
+
+    var res = firstNumber + lastNumber;
+
+    document.getElementById('result').value = res;
+    
+    };
+    var minusElement = document.getElementById('minus');
+    minusElement.onclick = function() {
+    var firstNumber = Number (document.getElementById('fNumber').value);
+    var lastNumber = Number (document.getElementById('lNumber').value);
+
+    var res = firstNumber - lastNumber;
+
+    document.getElementById('result').value = res;
+    
+    };
+
+    var multiplicationElement = document.getElementById('multiplication');
+    multiplicationElement.onclick = function() {
+    var firstNumber = Number (document.getElementById('fNumber').value);
+    var lastNumber = Number (document.getElementById('lNumber').value);
+
+    var res = firstNumber * lastNumber;
+
+    document.getElementById('result').value = res;
+    
+    };
+
+    var divisionElement = document.getElementById('division');
+    divisionElement.onclick = function() {
+    var firstNumber = Number (document.getElementById('fNumber').value);
+    var lastNumber = Number (document.getElementById('lNumber').value);
+
+    var res = firstNumber / lastNumber;
+
+    document.getElementById('result').value = res;
+    
+    };
+
+</script>
+
+    </script>
+</body>
+</html>
